@@ -20,3 +20,5 @@ jobs:
       - name: npm install
         working-directory: ./frontend/vite-project
         run: npm i
+      - name: npm runs
+        run: npm run dev

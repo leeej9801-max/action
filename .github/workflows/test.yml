@@ -13,3 +13,6 @@ jobs:
       #   run: $PSVersionTable
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Check Node.js version
+        run: node -v

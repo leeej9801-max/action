@@ -18,8 +18,8 @@ jobs:
       # - name: Check Node.js version
       #   run: node -v
       - name: npm install
-        working-directory: ./frontend/vite-project
+        working-directory: ./frontend
         run: npm i
       - name: npm runs
         run: npm run dev
-        working-directory: ./frontend/vite-project
+        working-directory: ./frontend

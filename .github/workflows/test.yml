@@ -1,0 +1,13 @@
+name: test
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    # runs-on: ubuntu-latest
+    runs-on: self-hosted
+    steps:
+      - name: Check PowerSell
+        run: $PSVersionTable

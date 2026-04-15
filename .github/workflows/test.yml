@@ -14,5 +14,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Check Node.js version
-        run: node -v
+      # 버전 확인
+      # - name: Check Node.js version
+      #   run: node -v
+      - name: npm install
+        run: npm i

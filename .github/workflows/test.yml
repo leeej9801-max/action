@@ -20,7 +20,10 @@ jobs:
       - name: npm install
         working-directory: ./frontend
         run: npm i
-
+      # 배포
       - name: npm runs
         working-directory: ./frontend
         run: npm run build
+      # 배포
+      - name: nginx strart
+        run: docker run -d -p 80:80 -v ./frontend/dist:/usr/share/nginx/html --name web nginx:1.28

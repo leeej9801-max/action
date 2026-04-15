@@ -9,5 +9,7 @@ jobs:
     # runs-on: ubuntu-latest
     runs-on: self-hosted
     steps:
-      - name: Check PowerSell
-        run: $PSVersionTable
+      # - name: Check PowerSell
+      #   run: $PSVersionTable
+      - name: Checkout
+        uses: actions/checkout@v4

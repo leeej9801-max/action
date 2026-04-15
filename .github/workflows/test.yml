@@ -29,3 +29,10 @@ jobs:
         run: |
           docker rm -f web
           docker run -d -p 80:80 -v ./frontend/dist:/usr/share/nginx/html -v ./frontend/default.conf:/etc/nginx/conf.d/default.conf --name web nginx
+
+      - name: uv image build
+        working-directory: ./backend
+        run: docker build -t uv:1 .
+
+      - name: fastapi run
+        run: docker run -d -p 8001:8000 -v ./backend:/workspace --name back uv:1 
